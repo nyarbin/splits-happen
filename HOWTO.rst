@@ -3,9 +3,10 @@ Ben Reis
 benjamin.e.reis@gmail.com
 
 Written in D because I initially misread the scoring rules to be more complex than they actually
-are, which would have made a single-pass computation much harder, and because testing and debugging
-is much more straightforward in D than in python, the language I would usually turn to for a simple
-calculator-type program.
+are, which would have made a static typing system and simple structs very useful, and because
+testing and debugging is much more straightforward in D than in python, the language I would usually
+turn to for a simple calculator-type program. While I was able to write a relatively
+simple single-pass algorithm, I ultimately stuck with D because of the simplicity of testing.
 
 The four tests specified in README.md have been set up to run on D's built-in unit testing feature;
 unit testing and related code would not compile for a production build. With a more complicated
