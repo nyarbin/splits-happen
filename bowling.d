@@ -23,17 +23,7 @@ int score(string line) {
          writeln("Current throw: " ~ line[throw_index .. throw_index+1]);
       }
       if (line[throw_index+1] == '/') { //skip this throw and just add spare score + bonus.
-         switch (line[throw_index+2]) {
-            case 'X':
-               full_score += 20;
-               break;
-            case '-':
-               full_score += 10;
-               break;
-            default:
-               full_score += 10 + to!(int)(line[throw_index+2 .. throw_index+3]);
-               break;
-         }
+         full_score += 10 + single_throw_score(line[throw_index+2 .. throw_index+3]);
          throw_index += 2; //advance past the whole frame
          //end spare handling
       } else { //no need to skip
